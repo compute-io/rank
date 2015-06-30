@@ -25,12 +25,24 @@
   "keywords": [
     "compute.io",
     "compute",
-    "computation"
+    "computation",
+    "statistics",
+    "stats",
+    "order statistics",
+    "rank",
+    "ordered",
+    "missing values"
   ],
   "bugs": {
     "url": "https://github.com/compute-io/rank/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "order-permutation": "^0.2.0",
+    "validate.io-array": "^1.0.6",
+    "validate.io-contains": "^1.0.0",
+    "validate.io-object": "^1.0.4",
+    "validate.io-string-primitive": "^1.0.0"
+  },
   "devDependencies": {
     "chai": "2.x.x",
     "mocha": "2.x.x",

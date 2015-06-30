@@ -83,7 +83,7 @@ describe( 'compute-rank', function tests() {
 
 		// max method
 		data = [ 2, 2, 1, 4, 3 ];
-		actual = rank ( data, {
+		actual = rank( data, {
 			'method': 'max'
 		});
 		expected = [ 3, 3, 1, 5, 4 ];
@@ -91,7 +91,7 @@ describe( 'compute-rank', function tests() {
 
 		// min method
 		data = [ 2, 2, 1, 4, 3 ];
-		actual = rank ( data, {
+		actual = rank( data, {
 			'method': 'min'
 		});
 		expected = [ 2, 2, 1, 5, 4 ];
@@ -99,16 +99,15 @@ describe( 'compute-rank', function tests() {
 
 		// ordinal method
 		data = [ 2, 2, 1, 4, 3 ];
-		actual = rank ( data, {
+		actual = rank( data, {
 			'method': 'ordinal'
 		});
-		expected = [ 3, 2, 1, 5, 4 ];
+		expected = [ 2, 3, 1, 5, 4 ];
 		assert.deepEqual( actual, expected );
 
 		// dense method
-		// max
 		data = [ 2, 2, 1, 4, 3 ];
-		actual = rank ( data, {
+		actual = rank( data, {
 			'method': 'dense'
 		});
 		expected = [ 2, 2, 1, 4, 3 ];
@@ -119,7 +118,7 @@ describe( 'compute-rank', function tests() {
 		var data, actual, expected;
 		// put missing values in front
 		data = [ NaN, 2, 2, 1, 4, 3, null, null ];
-		actual = rank ( data, {
+		actual = rank( data, {
 			'missing': 'first'
 		});
 		expected = [ 1, 5.5, 5.5, 4, 8, 7, 2, 3 ];
@@ -127,7 +126,7 @@ describe( 'compute-rank', function tests() {
 
 		// put missing values last
 		data = [ NaN, 2, 2, 1, 4, 3, null, null ];
-		actual = rank ( data, {
+		actual = rank( data, {
 			'missing': 'last'
 		});
 		expected = [ 6, 2.5, 2.5, 1, 5, 4, 7 ,8 ];
@@ -135,7 +134,7 @@ describe( 'compute-rank', function tests() {
 
 		// remove missing values
 		data = [ NaN, 2, 2, 1, 4, 3, null, null ];
-		actual = rank ( data, {
+		actual = rank( data, {
 			'missing': 'remove'
 		});
 		expected = [ 2.5, 2.5, 1, 5, 4 ];
